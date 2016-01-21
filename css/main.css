@@ -1,0 +1,401 @@
+
+/* note that most of this styling is for mobile viewing only. We built this website for mobile viewing first and then dealt with desktops later in responive.css
+
+/**********************************
+GENERAL 										
+***********************************/
+
+body {
+	font-family: 'Indie Flower', cursive;
+
+}
+
+a{
+	text-decoration: none; /* Removes underlines from text */
+}
+
+.wrapper{
+	max-width: 940px;  				/* Makes it responsive. The header is not included in the wrapper so it has no max width*/
+	margin: 0 auto;         		/* If two values e.g. 0 0 then it's referring to top bottom then left right. 0 auto makes it central. Auto makes it responsive Could use margin-left etc. instead.
+									 The margin is referring to outside the 'box'. Padding is inside the 'box'*/
+	padding: 0 5%;	
+	background-color: #F6E0FF; /* note this color doesn't show up - it gets overrided by the  color defined in the body - what else gets overrided in the body? text styles etcc??? check ....... */					 
+}
+
+img{
+	max-width: 100%;  /* BEcause the image was too big*/
+}
+
+h2 {
+	margin: 0 0 1em 0;  /*1em = 16px*/     /*I don't know what this is doing here because there is another h2 below that overrides this (later declarations get precedence*/
+	
+}
+
+h3{
+	margin: 0 0 1em 0;
+}
+
+
+
+/**********************************
+HEADING
+***********************************/
+
+#logo{                                                
+	text-align: center; 
+	margin: 0;
+}
+
+header{
+	margin:0 0 30px 0;
+	padding: 5px 0 0 0;
+	float: left;
+	width: 100%; /* without this it appeared as a sidebar on the left instead of ontop*/
+
+}
+
+h1{
+	font-family: 'Indie Flower', cursive;
+	margin: 20px 0 10px;
+	font-size: 1.75em;
+	font-weight: normal;
+	line-height: 0.8em;
+}
+
+h2{
+	font-size: 1.20em;
+	font-weight: normal;
+	margin: -5px 0 0;  /* Only margins can have negative values.  */
+}
+
+
+/**********************************
+NAVIGATION
+***********************************/
+
+nav{
+	text-align: center;
+	padding: 10px 0;
+	margin: 20px 0 0;
+}
+nav ul{
+	
+	list-style: none;
+	padding: 0;
+	margin: 0px 10px;
+}
+
+nav a{
+	padding: 10px;         /* the spacing between the menu items could also have also been done using margin-right/left instead */
+	font-weight: 800;
+}
+
+nav li{
+	display: inline-block;    /*makes the items in the list line up in a horizontal block*/
+
+}
+
+/**********************************
+FOOTER
+***********************************/
+
+ footer{
+	clear:both;                                  /* makes sure the footer is not float next to anything i.e its on its own line */
+	text-align: center;
+	padding-top: 50px;
+	background-color: #C2F0FF;
+				
+}
+
+
+																								
+/**********************************
+PAGE: PORTFOLIO                                                                          
+***********************************/
+#gallery{
+	margin: 0;
+	padding: 0;
+	list-style: none; /*removes the dot*/
+}
+
+#gallery li{
+	float:left;
+	width: 45%;
+	margin: 2.5%;
+	/*background: #f5f5f5; */
+}
+
+#gallery li a p{
+	margin:0;
+	text-align: center;
+	font-weight: 800;
+	font-size: 0.75em;
+	padding: 2.5%;
+}
+
+#gallery li img{
+	border-radius: 10px;
+}
+
+
+#skillsgallery {
+	margin: 0;
+	padding: 0;
+	list-style: none; /*removes the dot*/
+}
+
+#skillsgallery  li{
+	float:left;
+	width: 20%;
+	margin: 2.5%;
+	/*background: #f5f5f5; */
+}
+
+#skillsgallery  li a p{
+	margin:0;
+	text-align: center;
+	font-weight: 800;
+	font-size: 0.75em;
+	padding: 2.5%;
+}
+
+#skillsgallery  li img{
+	/*padding: 15px;*/
+	border-radius: 100%;
+	border-style: solid;
+	border-width: 5px;
+	border-color: black;
+
+}
+
+
+
+
+
+/*
+#skillsgallery li a h3  {						
+	list-style: none; 
+	display: block;
+	float:left;
+	width: 20%;
+	margin: 2.5%;
+
+}
+
+#skillsgallery img {   						
+
+	display: block;
+	float:left;
+	width: 20%;
+	margin: 2.5%;
+	border-style: solid;
+	border-width: 5px;
+	border-color: black;
+	border-radius: 100%;
+	}                                 */                            
+
+
+/**********************************
+PAGE: ABOUT
+***********************************/
+
+#profile-image{
+	display: block;  /*block is the default which means that it would try to take up the entire width of its parent element (<section>) */
+	border-radius: 100%;
+	max-width: 150px;
+	margin:0 auto 30px;*/                   																				/*up to here*/
+
+}
+
+h3{
+	text-align: center;
+}
+
+/**********************************
+PAGE: SKILLS
+***********************************/
+
+#backgroundinfo h2{  /*note that h2 has to be explicitly mentioned when using IDs in CSS. If I include p here it screws up for some reason - maybe only need to use clear both for the first element*/
+	clear:both;
+	color:black;
+
+}
+
+
+/**********************************
+PAGE: CONTACT
+***********************************/
+
+.contact-info {
+	list-style: none;
+	margin:0;
+	padding: 0;
+	font-size: 0.9em;
+}
+
+.contact-info a {
+	display:block; /* ?????????????????????????????? */
+	min-height: 20px;
+	background-repeat: no-repeat; /* we only want one */
+	background-size: 20px 20px; /* there are only 2 parameters */
+	padding: 0 0 0 30px;
+	margin:0 0 0 10px;
+}
+
+.contact-info li.phone a{ /* note don't need to put ul before .contact-info*/
+	background-image: url('../img/phone.png');    /* .. means go back up in the directory - because we are currently in the css directory*/
+} 
+
+.contact-info li.mail a{ 
+	background-image: url('../img/mail.png');    /* .. means go back up in the directory - because we are currently in the css directory*/
+} 
+
+.contact-info li.twitter a{ 
+	background-image: url('../img/twitter.png');    /* .. means go back up in the directory - because we are currently in the css directory*/
+} 
+
+
+  #third form{    /* Form */
+
+  max-width: 150px;
+  margin: 15px auto;
+  padding: 15px 20px;
+  background: #747373;
+  border-radius: 8px;
+  text-align: left;
+  float:center;
+
+  }
+
+
+/**********************************
+COLORS
+***********************************/
+
+/* site body */
+body{
+	background-color: #F6E0FF;
+	color: #999;
+}
+
+/* orange header */
+	header{
+	background: #66CCFF;
+	border-color: #FF4F00;
+}
+
+
+
+/* nav background on mobile */
+nav{
+	background: #4791FF;
+}
+
+
+
+/* logo text */
+h1, h2 {  /* Note this will have priority even if you declare an ID for h2 somewhere else */
+	color:white;
+}
+
+
+
+
+
+/* links */
+a{
+	color: #7D898F;
+}
+
+
+
+
+/* nav link */
+
+nav a, nav a:visited{  
+	color:#fff;
+}
+nav a.selected, nav a:hover{
+	color:#000000;
+	font-weight: 800;
+}
+
+
+
+/* selected nav link */
+
+
+/**********************************
+CSS Hover Feature for Gallery - from CSS tricks
+***********************************/
+
+figure {
+  display: block;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 0 0 0 0;
+}
+figcaption {
+  position: absolute;
+  margin-bottom: 7px;
+  background: black;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  padding: 10px 20px;
+  opacity: 0;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition:    all 0.6s ease;
+  -o-transition:      all 0.6s ease;
+}
+figure:hover figcaption {
+  opacity: 1;
+}
+figure:before {
+  /*content: "?"; */
+  position: absolute;
+  font-weight: 800;
+  background: black;
+  background: rgba(255,255,255,0.75);
+  text-shadow: 0 0 5px white;
+  color: black;
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius:    12px;
+  border-radius:         12px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  -moz-transition: all 0.6s ease;
+  opacity: 0.75;
+}
+figure:hover:before {
+  opacity: 0;
+}
+
+.cap-left:before {  bottom: 10px; left: 10px; }
+.cap-left figcaption { bottom: 0; left: -30%; }
+.cap-left:hover figcaption { left: 0; }
+
+.cap-right:before { bottom: 10px; right: 10px; }
+.cap-right figcaption { bottom: 0; right: -30%; }
+.cap-right:hover figcaption { right: 0; }
+
+.cap-top:before { top: 10px; left: 10px; }
+.cap-top figcaption { left: 0; top: -30%; }
+.cap-top:hover figcaption { top: 0; }
+
+.cap-bot:before { bottom: 10px; left: 10px; }
+.cap-bot figcaption { left: 0; bottom: -30%;}
+.cap-bot:hover figcaption { bottom: 0; }
+
+
+
+
+
+
+
+
+
+
